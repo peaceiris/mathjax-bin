@@ -1,6 +1,6 @@
 {
   "name": "mathjax-bin",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "mathjax executable",
   "main": "mathjax-bin.js",
   "scripts": {
