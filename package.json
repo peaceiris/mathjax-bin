@@ -10,8 +10,8 @@
   "author": "peaceiris",
   "license": "MIT",
   "dependencies": {
-    "get-stdin": "^8.0.0",
     "mathjax-node": "^2.1.1",
-    "pkg": "^4.4.9"
+    "pkg": "^4.4.9",
+    "server": "^1.0.30"
   }
 }
