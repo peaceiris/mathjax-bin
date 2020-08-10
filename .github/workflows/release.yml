@@ -18,6 +18,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: chmod 700 ./build/*
 
       - name: Install github/hub
         run: |
