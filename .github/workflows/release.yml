@@ -31,8 +31,9 @@ jobs:
           TAG_NAME="${GITHUB_REF##refs/tags/}"
           RELEASE_NAME="$(jq -r '.name' ./package.json)"
           echo "${RELEASE_NAME} ${TAG_NAME}" > ./release_notes.md
+          cd ./build
           ./bin/hub release create \
             --draft \
-            --file ./release_notes.md \
-            $(cd ./build && for i in $(echo *); do echo -n "--attach ${i}#${i} "; done) \
+            --file ../release_notes.md \
+            $(for i in $(echo *); do echo -n "--attach ${i}#${i} "; done) \
             "${TAG_NAME}"
