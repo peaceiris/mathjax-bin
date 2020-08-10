@@ -1,11 +1,11 @@
 {
-  "name": "mathjax-bin",
+  "name": "mathjax-server",
   "version": "0.2.0",
   "description": "mathjax executable",
-  "main": "mathjax-bin.js",
+  "main": "mathjax-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg mathjax-bin.js --out-path ./build -t node12-linux-x64,node12-macos-x64,node12-win-x64"
+    "build": "pkg mathjax-server.js --out-path ./build -t node12-linux-x64,node12-macos-x64,node12-win-x64"
   },
   "author": "peaceiris",
   "license": "MIT",

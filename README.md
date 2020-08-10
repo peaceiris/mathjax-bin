@@ -1,7 +1,7 @@
-## mathjax-bin
+## mathjax-server
 
 ```
-node mathjax-bin.js
+node mathjax-server.js
 ```
 
 ```
