@@ -10,9 +10,11 @@ mjAPI.config({
 });
 mjAPI.start();
 
+const port = process.argv[2] === void 0 ? 8989 : process.argv[2];
+
 server(
   {
-    port: 8888,
+    port: parseInt(port, 10),
     security: { csrf: false },
     parser: {
       json: { limit: "1mb" },
@@ -36,11 +38,11 @@ server(
             if (!data.errors) {
               res = data.svg;
             }
-          }
+          },
         );
       })();
       return res;
     }),
   ],
-  error((ctx) => status(500).send(ctx.error.message))
+  error((ctx) => status(500).send(ctx.error.message)),
 );
