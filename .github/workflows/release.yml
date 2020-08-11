@@ -33,7 +33,6 @@ jobs:
           echo "${RELEASE_NAME} ${TAG_NAME}" > ./release_notes.md
           cd ./build
           ../bin/hub release create \
-            --draft \
             --file ../release_notes.md \
             $(for i in $(echo *); do echo -n "--attach ${i}#${i} "; done) \
             "${TAG_NAME}"

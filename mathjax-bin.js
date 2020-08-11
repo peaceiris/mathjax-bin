@@ -9,11 +9,12 @@ mjAPI.config({
 mjAPI.start();
 
 (async () => {
-  const input = await getStdin();
+  const base64Str = await getStdin();
+  const math = new Buffer(base64Str, "base64");
 
   mjAPI.typeset(
     {
-      math: input.trim(),
+      math: math,
       format: "TeX",
       svg: true,
     },
@@ -21,6 +22,6 @@ mjAPI.start();
       if (!data.errors) {
         console.log(data.svg);
       }
-    }
+    },
   );
 })();
